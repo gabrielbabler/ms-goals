@@ -1,0 +1,17 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /gbabler
+
+spring:
+  profiles:
+    active: ${PROFILE:dev}
+  jpa:
+    database: postgresql
+    show-sql: false
+  datasource:
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    url: ${DB_URL}
+    platform: postgres
+    driverClassName: org.postgresql.Driver

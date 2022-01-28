@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+  postgres-workshop:
+    image: library/postgres:13.5
+    restart: always
+    container_name: postgres-kotlin
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=goals
+      - POSTGRES_USER=postgres
+      - PGPORT=5433
+    ports:
+      - "5433:5433"
+
+volumes:
+  db_vol:
+    external:
+      name: "postgres-kotlin"
