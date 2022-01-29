@@ -10,14 +10,11 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/goals")
-class GoalController () {
-
-    lateinit var goalService: GoalService
+class GoalController (private val goalService: GoalService) {
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     fun list(): List<GoalResponse> {
         return goalService.listAll();
     }
-
 }
