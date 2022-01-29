@@ -1,5 +1,3 @@
--- liquibase formatted sql
--- changeset gbabler:1
 create table goals (
 id varchar(36) primary key,
 description varchar(255) not null,
