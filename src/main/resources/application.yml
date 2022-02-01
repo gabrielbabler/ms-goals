@@ -13,5 +13,7 @@ spring:
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
     url: ${DB_URL}
-    platform: postgres
     driverClassName: org.postgresql.Driver
+  sql:
+    init:
+      platform: postgres
